@@ -146,15 +146,34 @@ function animateLines() {
   gsap.set(rightLine, { strokeDasharray: "1 123", strokeDashoffset: "0" });
 
   tl.to(leftLine, {
-    duration: 1,
+    duration: 0.3,
     strokeDasharray: "50 74",
-    strokeDashoffset: "-198 ",
+    ease: "none"
   }).to(
     rightLine,
     {
-      duration: 1,
+      duration: 0.3,
       strokeDasharray: "50 74",
+      ease: "none"
+    },
+    "<"
+  );
+
+  tl.to(
+    leftLine,
+    {
+      duration: 0.8,
       strokeDashoffset: "-198 ",
+      ease: "none"
+    },
+    "<0.1"
+  )
+  .to(
+    rightLine,
+    {
+      duration: 0.8,
+      strokeDashoffset: "-198 ",
+      ease: "none"
     },
     "<"
   );
@@ -165,6 +184,7 @@ function animateLines() {
       duration: 0.3,
       strokeDasharray: "0 123",
       strokeDashoffset: "-248",
+      ease: "none"
     },
     "-=0.25"
   );
@@ -175,6 +195,7 @@ function animateLines() {
       duration: 0.3,
       strokeDasharray: "0 123",
       strokeDashoffset: "-248",
+      ease: "none"
     },
     "<"
   );
