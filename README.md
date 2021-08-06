@@ -1,0 +1,1 @@
+Loading animation from Nier Reincarnation made with GSAP.
